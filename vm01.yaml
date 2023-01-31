@@ -8,7 +8,7 @@ spec:
   - networkName: "tanzu-vlan-41-workload"
     networkType: vsphere-distributed
   className: best-effort-xsmall
-  imageName: centos8
+  imageName: ob-20611104-ubuntu-2004-amd64-vmi-k8s-v1.23.8---vmware.2-tkg.1-zshippable
   powerState: poweredOn
   storageClass: k8s-policy
   vmMetadata:
