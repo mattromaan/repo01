@@ -19,7 +19,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
     name: centos-vm-cfm
-    namespace: tanzu
+    namespace: ns01
 data: 
   hostname: centos-vm
   password: VMware1!
