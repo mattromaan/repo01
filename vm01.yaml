@@ -5,7 +5,7 @@ metadata:
   namespace: ns01
 spec:
   networkInterfaces:
-  - networkName: "TANZU-VLAN-41-Workload"
+  - networkName: "tanzu-vlan-41-workload"
     networkType: vsphere-distributed
   className: best-effort-xsmall
   imageName: centos8
