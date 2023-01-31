@@ -14,12 +14,3 @@ spec:
   vmMetadata:
     configMapName: centos-vm-cfm
     transport: OvfEnv
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-    name: centos-vm-cfm
-    namespace: ns01
-data: 
-  hostname: centos-vm
-  password: VMware1!
