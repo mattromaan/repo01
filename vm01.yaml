@@ -5,10 +5,10 @@ metadata:
   namespace: ns01
 spec:
   networkInterfaces:
-  - networkName: "tanzu-vlan-41-workload"
+  - networkName: "workload"
     networkType: vsphere-distributed
   className: best-effort-xsmall
-  imageName: ob-20611104-ubuntu-2004-amd64-vmi-k8s-v1.23.8---vmware.2-tkg.1-zshippable
+  imageName: centos01
   powerState: poweredOn
   storageClass: k8s-policy
   vmMetadata:
