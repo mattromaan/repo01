@@ -1,0 +1,18 @@
+node {
+    stage('Build') {
+  withCredentials([
+      usernamePassword(credentialsId: 'tanzu_ci_user',
+      usernameVariable: "KUBECTL_VSPHERE_USER", 
+      passwordVariable: "KUBECTL_VSPHERE_PASSWORD")
+      ]) 
+  {
+      sh '''set +x 
+          kubectl vsphere login --server=${Tanzu_Prod_Server} --vsphere-username ${KUBECTL_VSPHERE_USER} --insecure-skip-tls-verify
+          kubectl config use-context ns01
+          kubectl apply -f https://raw.githubusercontent.com/mattromaan/repo01/main/vm02.yaml
+          '''
+    }
+                    }
+}
+
+
