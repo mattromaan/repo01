@@ -1,16 +1,22 @@
-apiVersion: vmoperator.vmware.com/v1alpha1
-kind: VirtualMachine
+apiVersion: run.tanzu.vmware.com/v1alpha2
+kind: TanzuKubernetesCluster
 metadata:
-  name: centos-vm
+  name: cluster01
   namespace: ns01
 spec:
-  networkInterfaces:
-  - networkName: "workload"
-    networkType: vsphere-distributed
-  className: best-effort-xsmall
-  imageName: centos01
-  powerState: poweredOn
-  storageClass: k8s-policy
-  vmMetadata:
-    configMapName: centos-vm-cfm
-    transport: OvfEnv
+  topology:
+    controlPlane:
+      replicas: 1
+      vmClass: best-effort-small
+      storageClass: k8s-policy
+      tkr:  
+        reference:
+          name: v1.22.9---vmware.1-tkg.1.cc71bc8
+    nodePools:
+    - name: worker
+      replicas: 1
+      vmClass: best-effort-small
+      storageClass: k8s-policy
+      tkr:  
+        reference:
+          name: v1.22.9---vmware.1-tkg.1.cc71bc8
