@@ -7,5 +7,5 @@ metadata:
     vmware-system-resource-pool-cpu-limit: "4.5510"
     vmware-system-resource-pool-memory-limit: 20480Mi
   labels:
-    kubernetes.io/metadata.name: ns01
-  name: ns01
+    kubernetes.io/metadata.name: ns02
+  name: ns02
