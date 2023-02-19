@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns01
+  labels:
+    my-label: "my-label-val-yaml"
+  annotations:
+    my-ann-yaml: "my-ann-val-yaml"
