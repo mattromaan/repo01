@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    vmware-system-namespace-owner-count: "1"
+    vmware-system-resource-pool: resgroup-61015
+    vmware-system-resource-pool-cpu-limit: "4.5510"
+    vmware-system-resource-pool-memory-limit: 20480Mi
+  labels:
+    kubernetes.io/metadata.name: ns01
+  name: ns01
