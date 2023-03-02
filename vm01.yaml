@@ -20,20 +20,3 @@ spec:
       tkr:  
         reference:
           name: v1.22.9---vmware.1-tkg.1.cc71bc8
-
-
-
-
-
-#!/bin/bash
-
-kubectl apply -f https://raw.githubusercontent.com/mattromaan/repo01/main/vm01.yaml
-sleep 10
-
-
-until kubectl get tanzukubernetesclusters.run.tanzu.vmware.com -A | awk '{print $7}' | grep "False"
-do
-  echo "Waiting for the cluster..."
-  sleep 15
-done
-  echo "TKG cluster is READY! :D"
